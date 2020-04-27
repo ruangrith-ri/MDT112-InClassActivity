@@ -17,17 +17,15 @@ void loop(){
 */
 
     if(lastState > currentState){
-        Serial.println("State FALLING");
-        tone(8,200,500);
-        delay(250);
-        tone(8,400,100);
-        count++;
-        Serial.println("count : " + String(count));
+        delay(20);
+        if(digitalRead(2) == 0){
+            Serial.println("State FALLING with Debounce");
+        }
+        
     }
     if(lastState < currentState){
         Serial.println("State RISING\n");
         tone(8,400,200);
-        
     }
     
     lastState = currentState;
