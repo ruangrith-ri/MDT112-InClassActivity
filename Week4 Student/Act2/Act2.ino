@@ -7,7 +7,7 @@ void setup ()
     
     for (int i = 0; i <= 9; i++)
     {
-    stringArrey = stringArrey + sampleArray[i] + '\t';
+    stringArrey = stringArrey + sampleArray[i] + '0';
     }
     Serial.println(stringArrey);
 }
