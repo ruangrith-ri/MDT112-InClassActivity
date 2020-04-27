@@ -33,5 +33,5 @@ void loop()
     laststate = currentSteate;
     
     delay(50);
-    Serial.println("-------------------------------------");
+
 }
