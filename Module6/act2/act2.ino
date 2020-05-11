@@ -18,7 +18,7 @@ void loop(){
     {
         digitalWrite(5,1);
     }
-    else if (state =="off ")
+    else if (state =="off")
     {digitalWrite(5,0);
     }
 }
