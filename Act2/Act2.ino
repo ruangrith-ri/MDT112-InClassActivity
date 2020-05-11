@@ -10,14 +10,13 @@ void loop()
 {
     long cuurrentTime = millis();
 
-    if(state == "ON" && cuurrentTime - lasttimeStrateChange >= 500)
-    {
+    if (state == "ON" && cuurrentTime - lasttimeStrateChange >= 500){
         state = "OFF";
         lasttimeStrateChange = cuurrentTime;
     }
     else if (state == "OFF" && cuurrentTime - lasttimeStrateChange >= 500){
         state = "ON";
-        lasttimeStrateChange - cuurrentTime;
+        lasttimeStrateChange = cuurrentTime;
     }
 
     if(state == "ON"){
