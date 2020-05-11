@@ -16,7 +16,7 @@ void loop()
      {
          Serial.println ("Change!!")
      }*/
-    //กดครั้ง1ขึึ้นครั้งเดียว (1>0)
+    /* กดครั้ง1ขึึ้นครั้งเดียว (1>0)
     if(lastState > currentState)
     {  
         tone(8,200,50);
@@ -32,6 +32,15 @@ void loop()
         Serial.println("number = "+String(x));
         x++;
 
+    }*/
+    // ค่าdelay = debounce
+    if(lastState>currentState)
+    {
+        delay(20);
+        if(digitalRead(2)==LOW)
+        {
+            Serial.println("State Falling with Debounce");
+        }
     }
      lastState = currentState;
      delay(100);
