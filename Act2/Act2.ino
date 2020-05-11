@@ -10,20 +10,22 @@ void loop()
 {
     long cuurrentTime = millis();
 
-    if (state == "ON" && cuurrentTime - lasttimeStrateChange >= 500){
-        state = "OFF";
-        lasttimeStrateChange = cuurrentTime;
-    }
-    else if (state == "OFF" && cuurrentTime - lasttimeStrateChange >= 500){
-        state = "ON";
-        lasttimeStrateChange = cuurrentTime;
+    if (state == "ON"){
+    digitalWrite(5, 1);
+
+        if (cuurrentTime - lasttimeStrateChange >= 500){
+            state = "OFF";
+            lasttimeStrateChange = cuurrentTime;
+        }
     }
 
-    if(state == "ON"){
-        digitalWrite(5, 1);
-        
+    if (state == "OFF"){
+        digitalWrite(5, 0);
+
+        if (cuurrentTime - lasttimeStrateChange >= 500){
+            state = "ON";
+            lasttimeStrateChange = cuurrentTime;
+        }
     }
-    else if (state == "OFF"){
-    digitalWrite(5, 0);
-    }
+
 }
