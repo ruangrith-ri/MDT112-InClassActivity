@@ -8,10 +8,6 @@ void setup(){
 void loop(){
     bool currentState = digitalRead(2);
 
-    /* Serial.println("currentState : "+ String(currentState)+
-                    " lastState : " + String(lastState));
-                    */
-    
     if(lastState > currentState)
     {
         Serial.println("State FALLING "+String(x)+" ");
