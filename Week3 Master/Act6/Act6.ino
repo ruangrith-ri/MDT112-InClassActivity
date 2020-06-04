@@ -1,4 +1,5 @@
-void setup() {
+void setup() 
+{
   pinMode(2, OUTPUT);
   pinMode(3, OUTPUT);
   pinMode(5, OUTPUT);
@@ -14,5 +15,7 @@ void setup() {
   digitalWrite(7, 1);
 }
 
-void loop() {
+void loop() 
+{
+    
 }

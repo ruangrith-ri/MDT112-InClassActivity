@@ -1,5 +1,5 @@
 long lasttimestatechange = 0;
-String state = "ON"
+String state = "ON";
 void setup()
 {
     Serial.begin(9600);
