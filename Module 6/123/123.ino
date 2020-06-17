@@ -1,4 +1,4 @@
-long H = 0,M=0,S=0;
+volatile long H = 0,M=0,S=0;
 void myfunction(){
     Serial.println("H:" + String(H)+" - M:"+ String(M)+" - S:"+ String(S) + "\n");
 }
@@ -14,7 +14,7 @@ void setup(){
 
 
 void loop(){
-    long time = millis();
+    volatile long time = millis();
     if(time>1000){
         time = 0;
         S = S+1;
