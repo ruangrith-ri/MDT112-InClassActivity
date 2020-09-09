@@ -9,17 +9,22 @@ void setup() {
 
   lcd.setCursor(0, 0);
   lcd.print("Hello, world!");
-  
+
   lcd.setCursor(0, 1);
   lcd.print("Hi");
 
   delay(2000);
+
+  lcd.clear();
 }
 
 void loop() {
   lcd.setCursor(0, 0);
-  lcd.print("Hello, world!");
+  // lcd.print("Hello, world!");
 
   lcd.setCursor(0, 1);
   lcd.print(millis());
+
+  delay(20);
+  lcd.clear();
 }

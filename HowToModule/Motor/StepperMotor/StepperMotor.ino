@@ -2,7 +2,7 @@
 
 #define STEPS_PER_360_DEGREE 2038
 
-Stepper stepper(STEPS_PER_360_DEGREE, 8, 10, 9, 11); // IN1 IN2 IN3 IN4
+Stepper stepper(STEPS_PER_360_DEGREE, 12, 10, 9, 11); // IN1 IN2 IN3 IN4
 
 void setup() {
   Serial.begin(9600);

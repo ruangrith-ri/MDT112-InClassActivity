@@ -41,6 +41,9 @@ void setup() {
   delay(2000);
 }
 
+int i = 0;
+bool flip = false;
+
 void loop() {
   oled.clearDisplay();
   oled.setCursor(0, 0);
@@ -58,7 +61,7 @@ void loop() {
   oled.drawCircle(0, 0, 20, SSD1306_WHITE);
   oled.drawRect(32, 0, 20, 20, SSD1306_WHITE);
 
-  oled.fillCircle(64, 0, 10, SSD1306_WHITE);
+  oled.fillCircle(64, 0, i, SSD1306_WHITE);
   oled.fillRect(96, 0, 20, 10, SSD1306_WHITE);
 
   oled.display();
